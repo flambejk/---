@@ -1,0 +1,316 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url(../fonts/Montserrat-Bold.ttf);
+}
+@font-face {
+    font-family: 'Montserrat-Medium';
+    src: url(../fonts/Montserrat-Medium.ttf);
+}
+/* Общее, ко всему сайту */
+
+body {
+    padding: 0 200px;
+    font-family: 'Montserrat';
+    color: #444444;
+}
+
+/* Шапка */
+
+header {
+    height: 50px;
+    box-shadow: 0 1px 0 lightgrey;
+    font-size: 16px;
+    margin-bottom: 50px;
+}
+.nav-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    height: 100%;
+    align-items: center;
+}
+.nav-tab {
+    text-transform: uppercase;
+    background: none;
+    height: 100%;
+    font-family: 'Montserrat-Medium';
+    font-weight: 500;
+    border: none;
+    letter-spacing: 0.5px;
+    padding: 5px 20px;
+    position: relative;
+    top: 0;
+    left: 0;
+    border-top: solid 5px transparent;
+    border-bottom: solid 5px transparent;
+    color: #444444;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.nav-tab:focus, .nav-tab:hover {
+    border-bottom: 5px solid #429F3A !important;
+}
+
+/* Тело */
+.tab-1 {
+    display: flex;
+    flex-direction: column;
+}
+.tab-2 {
+    display: none;
+    flex-direction: column;
+}
+.tab-3 {
+    display: none;
+    justify-content: space-between;
+}
+.tab-1-button {
+    border-bottom: 5px solid #429F3A;
+}
+.description {
+    font-size: 14px;
+    margin-bottom: 24px;
+}
+.description-par::after, .product-source-par::after {
+    content:" \A \A ";
+    white-space: pre;
+}
+.product-info {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    gap: 100px;
+    row-gap: 30px;
+    margin-bottom: 50px;
+}
+.product-description-card {
+    width: 500px;
+    height: max-content;
+    flex-grow: 1;
+}
+.description-header {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Характеристики продукта */
+
+.product-features {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+.prod-feature-block {
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 1px 0 rgba(178, 178, 178, 0.5);
+    padding-bottom: 2px;
+}
+
+/* Предложение продуктов к корзине - Блок */
+
+.product-suggestion-block {
+    margin-bottom: 16px;
+}
+.product-suggestion-header {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.product-suggestion-cards {
+    display: flex;
+    gap: 30px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    min-width: 0;
+    overflow: hidden;
+}
+.product-card {
+    border: 0.5px solid rgba(222, 222, 222, 1);
+    border-radius: 10px;
+    max-width: 100%;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.product-card img {
+    height: 234px;
+    max-width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.product-card-info {
+    padding: 14px 12px 20px;
+    height: calc(100% - 234px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.product-card-header {
+    font-size: 14px;
+}
+.product-card-producer {
+    font-size: 12px;
+}
+.product-card-price {
+    font-weight: 600;
+    font-size: 20px;
+}
+.product-card-amount {
+    font-size: 12px;
+}
+.product-card-rating svg {
+    width: 15px;
+    height: 14px;
+}
+.cart-icon-container {
+    background: #429F3A;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    position: absolute;
+    width: 66px;
+    height: 36px;
+    right: 0;
+    bottom: 33px;
+}
+.favourite-icon-container {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+/* Swiper */
+
+.swiper-pagination {
+    bottom: 16px !important;
+}
+.swiper-pagination-bullet {
+    background-color: #429F3A !important;
+}
+.swiper-slide {
+    max-width: max-content;
+    width: 250px !important;
+}
+.swiper-wrapper {
+    gap: 10px;
+}
+
+/*                                      */
+/*           Вкладка "Отзывы"           */
+/*                                      */
+
+.reviews-intro {
+    font-size: 14px;
+}
+.toReviewButton {
+    font-size: 15px;
+    background-color: #429F3A;
+    color: #fff;
+    padding: 10px 18px;
+    width: max-content;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 30px;
+    font-weight: 600;
+}
+
+/*                                      */
+/*           Вкладка "Откуда?"          */
+/*                                      */
+
+
+.product-source-block {
+    width: 50%;
+}
+.product-source-buttons-block {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 10px;
+}
+.product-source-buttons-block button {
+    background: none;
+    flex: 1;
+    border: 0.5px solid rgba(68, 68, 68, 0.5);
+    padding: 10px 40px;
+    border-radius: 5px;
+    text-wrap: nowrap;
+    cursor: pointer;
+    transition: 0.2s;
+    font-family: 'Montserrat';
+}
+.product-source-buttons-block button:hover {
+    background: rgba(66, 159, 58, 1);
+    color: #fff;
+    border: none;
+}
+.product-source-additional-info {
+    width: 35%;
+    min-width: min-content;
+}
+.product-source-additional-info img {
+    width: 100%;
+    /* min-width: 100%; */
+    height: auto;
+    border-radius: 5px;
+}
+
+
+/*             Адаптив!!!!)))))              */
+
+@media screen and (max-width: 1520px) {
+    .tab-3 {
+        flex-direction: column;
+    }
+    .product-source-block {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 1200px) {
+    body {
+        padding: 0 100px;
+    }
+}
+@media screen and (max-width: 800px) {
+    body {
+        padding: 0 50px;
+    }
+    .nav-tabs {
+        width: 100%;
+        gap: 20px;
+    }
+    p {
+        text-align: justify;
+    }
+}
+@media screen and (max-width: 450px) {
+    body {
+        padding: 0 20px;
+    }
+    .nav-tabs {
+        gap: 10px;
+    }
+    .nav-tab {
+        padding: 5px 10px;
+    }
+    .product-source-buttons-block button {
+        padding: 10px 20px;
+        border-color: #043E44;
+        color: #043E44;
+        font-weight: 600;
+    }
+}
